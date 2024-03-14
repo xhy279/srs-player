@@ -7,6 +7,7 @@ export interface SrsWhepPlayerProps {
   options?: React.VideoHTMLAttributes<HTMLVideoElement>
 }
 
+// eg: http://localhost:8081/rtc/v1/whep/?app=live&stream=livestream
 const getIdFromUrl = (url: string) => {
   const searchParams = new URLSearchParams(new URL(url).search)
   const streamValue = searchParams.get('stream')
@@ -29,6 +30,7 @@ export const SrsPlayer: React.FC<SrsWhepPlayerProps> = ({ url, options }) => {
   }
   const videoRef = useRef<HTMLVideoElement>(null)
   const srsSdkRef = useRef<SrsRtcWhipWhepAsync | null>(null)
+
   const id = getIdFromUrl(url)
   const [status, setStatus] = React.useState(Status.Loading)
 

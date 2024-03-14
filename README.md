@@ -7,6 +7,7 @@ This is the SRS ([Simple Realtime Server](https://github.com/ossrs/srs)) whipwhe
 ## Usage
 
 ```javascript
+import 'srs-player/dist/index.css';
 import { SrsPlayer } from 'srs-player';
 
 <SrsPlayer url={url} options={options}/>

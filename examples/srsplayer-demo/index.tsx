@@ -4,6 +4,7 @@ import { SrsPlayer } from '../../src'
 
 import '../../dist/index.css'
 
+// change the url to your srs server
 const url = import.meta.env.VITE_URL
 
 function App() {

@@ -2,14 +2,14 @@
   "name": "srs-player",
   "version": "1.0.0",
   "description": "srs player implemented in react",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist/"
+    "lib/"
   ],
   "scripts": {
-    "build": "rimraf dist && rollup --bundleConfigAsCjs -c rollup.config.js",
+    "build": "rimraf lib && rollup --bundleConfigAsCjs -c rollup.config.js",
     "demo": "vite serve examples/srsplayer-demo/ --force"
   },
   "keywords": [
