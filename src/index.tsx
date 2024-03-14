@@ -38,7 +38,6 @@ export const SrsPlayer: React.FC<SrsWhepPlayerProps> = ({ url, options }) => {
       const parseIdResult = await srsSdkRef.current.play(url)
       console.log(`SrsWhepPlayer play success on ${id}`, parseIdResult)
       setStatus(Status.Playing)
-
       if (videoRef.current) {
         videoRef.current.srcObject = srsSdkRef.current.stream
       }
