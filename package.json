@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "build": "rimraf lib && rollup --bundleConfigAsCjs -c rollup.config.js",
-    "demo": "vite serve examples/srsplayer-demo/ --force"
+    "demo": "vite serve examples/srsplayer-demo/ --force",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "srs",
