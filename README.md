@@ -14,3 +14,10 @@ import { SrsPlayer } from 'srs-player';
 ```
 
 Check more in the `examples` folder for usage.
+
+## Development
+
+```bash
+bun i
+bun demo
+```
