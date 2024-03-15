@@ -10,6 +10,8 @@ This is the SRS ([Simple Realtime Server](https://github.com/ossrs/srs)) whipwhe
 import 'srs-player/dist/index.css';
 import { SrsPlayer } from 'srs-player';
 
+// url is the srs webrtc endpoint
+// options is the html video tag attributes
 <SrsPlayer url={url} options={options}/>
 ```
 

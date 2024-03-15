@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { SrsPlayer } from '../../src'
 
-import '../../dist/index.css'
+import '../../src/index.css'
 
 // change the url to your srs server
 const url = import.meta.env.VITE_URL
