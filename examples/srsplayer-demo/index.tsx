@@ -26,12 +26,6 @@ function App() {
             audio: {
               enable: false,
             },
-            video: {
-              enable: true,
-              transceiverOptions: {
-                direction: 'recvonly',
-              },
-            },
           }}
         />
       </div>

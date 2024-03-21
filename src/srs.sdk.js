@@ -7,7 +7,23 @@
 // Original SDK: https://github.com/ossrs/srs
 // Modifications by Jeremy Xia [https://github.com/xhy279/]
 
-import { assign } from 'radash'
+function assign(initial, override) {
+  if (!initial || !override) return initial ?? override ?? {}
+
+  return Object.entries({ ...initial, ...override }).reduce(
+    (acc, [key, value]) => {
+      return {
+        ...acc,
+        [key]: (() => {
+          if (typeof initial[key] === 'object' && initial[key] !== null)
+            return assign(initial[key], value)
+          return value
+        })(),
+      }
+    },
+    {}
+  )
+}
 function SrsError(name, message) {
   this.name = name
   this.message = message

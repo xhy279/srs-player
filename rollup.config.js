@@ -36,7 +36,7 @@ export default [
         throwErrorOnSrcNotFound: true,
       }),
     ],
-    external: ['react', 'react-dom'],
+    external: ['react', 'react-dom', 'radash'],
   },
   {
     input: './src/index.d.ts',
