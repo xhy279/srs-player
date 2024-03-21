@@ -5,6 +5,7 @@ import { SrsRtcWhipWhepAsync } from './srs.sdk'
 export interface SrsWhepPlayerProps {
   url: string
   options?: React.VideoHTMLAttributes<HTMLVideoElement>
+  rtcOpts?: any
 }
 
 // eg: http://localhost:8081/rtc/v1/whep/?app=live&stream=livestream
@@ -19,7 +20,11 @@ enum Status {
   Playing = 'playing',
 }
 
-export const SrsPlayer: React.FC<SrsWhepPlayerProps> = ({ url, options }) => {
+export const SrsPlayer: React.FC<SrsWhepPlayerProps> = ({
+  url,
+  options,
+  rtcOpts,
+}) => {
   const videoOptions = {
     ...{
       autoPlay: true,
@@ -37,7 +42,7 @@ export const SrsPlayer: React.FC<SrsWhepPlayerProps> = ({ url, options }) => {
   const startPlay = async () => {
     srsSdkRef.current = new SrsRtcWhipWhepAsync()
     try {
-      const parseIdResult = await srsSdkRef.current.play(url)
+      const parseIdResult = await srsSdkRef.current.play(url, rtcOpts)
       console.log(`SrsWhepPlayer play success on ${id}`, parseIdResult)
       setStatus(Status.Playing)
       if (videoRef.current) {

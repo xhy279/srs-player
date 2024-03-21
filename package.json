@@ -1,37 +1,18 @@
 {
   "name": "srs-player",
-  "version": "0.1.1",
-  "description": "srs player implemented in react",
-  "main": "lib/index.umd.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib/"
-  ],
-  "scripts": {
-    "build": "rimraf lib && rollup --bundleConfigAsCjs -c rollup.config.js",
-    "demo": "vite serve examples/srsplayer-demo/ --force",
-    "prepublishOnly": "npm run build"
-  },
-  "keywords": [
-    "srs",
-    "react",
-    "player"
-  ],
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "version": "0.1.2",
   "author": "Jeremy Xia<https://github.com/xhy279>",
   "repository": {
     "type": "git",
     "url": "https://github.com/xhy279/srs-player.git"
   },
-  "license": "MIT",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.esm.js",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "radash": "^12.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
@@ -42,5 +23,25 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
     "vite": "^5.1.6"
-  }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "description": "srs player implemented in react",
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "srs",
+    "react",
+    "player"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf lib && rollup --bundleConfigAsCjs -c rollup.config.js",
+    "demo": "vite serve examples/srsplayer-demo/ --force",
+    "prepublishOnly": "npm run build"
+  },
+  "types": "lib/index.d.ts"
 }
